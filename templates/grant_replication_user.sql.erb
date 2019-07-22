@@ -1,0 +1,2 @@
+CREATE USER '<%= node['mysql']['replication_user_name'] %>'@'%' IDENTIFIED BY '<%= node['mysql']['replication_user_password'] %>';
+GRANT REPLICATION SLAVE ON *.* TO '<%= node['mysql']['replication_user_name'] %>'@'%';
